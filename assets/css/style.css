@@ -1,0 +1,162 @@
+* {
+    font-family: Helvetica, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    background-color: blue;
+}
+
+h1 {
+    margin-left: 50px;
+}
+
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.navWrape {
+    margin: 15px;
+    padding: 15px;
+}
+
+.button {
+    color: white;
+    margin: 20px;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.button::before,
+.button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    background-color: white;
+    transition: width 0.3s, transform 0.3s;
+}
+
+.button::before {
+    left: 50%;
+    transform-origin: right; 
+}
+
+.button::after {
+    right: 50%;
+    transform-origin: left; 
+}
+
+.button:hover::before {
+    width: 50%; 
+    transform: translateX(-100%); 
+}
+
+.button:hover::after {
+    width: 50%;
+    transform: translateX(100%);
+}
+
+
+.shopUnit {
+    display: block;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    height: 100%;
+    color: white;
+    background-color: #6C8CD5;
+    font-size: 30px;
+}
+
+.shopUnit img {
+    max-width: 100%;
+    height: auto;
+}
+
+.shopUnitName {
+    color: #000000;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.shopUnitShortDesc {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #000000;
+}
+
+.shopUnitPrice {
+    margin-top: 20px;
+    color: #4830F0;
+
+}
+
+.shopUnitMore {
+    text-decoration: none;
+    width: 70%;
+    display: inline-block;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #000000 0%, #4830F0 51%, #000000 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+}
+
+.shopUnitMore:hover {
+    background-position: right center;
+}
+
+.shopUnitall {
+    display: flex;
+}
+
+.img-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    margin-left: 50%;
+    margin-bottom: 20px;
+}
+
+.imgAll{
+    width: 50%;
+    height: auto;
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: black;
+  color: white;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
